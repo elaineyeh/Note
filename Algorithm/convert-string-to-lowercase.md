@@ -12,8 +12,4 @@ print(asc_str)
 ```
 
 >Reference url
-<<<<<<< HEAD
 >>https://stackoverflow.com/questions/180606/how-do-i-convert-a-list-of-ascii-values-to-a-string-in-python
-=======
->>https://stackoverflow.com/questions/180606/how-do-i-convert-a-list-of-ascii-values-to-a-string-in-python
->>>>>>> bf3d7fb88084813ef42b0dd1c6a0f3e2aebea081
