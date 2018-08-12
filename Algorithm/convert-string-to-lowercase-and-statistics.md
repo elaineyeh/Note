@@ -1,4 +1,7 @@
-# 將英文字母由大寫轉為小寫並統計字母出現次數
+# Convert-string-to-lowercase-and-statistics
+
+將英文字母由大寫轉為小寫並統計字母出現次數
+
 ```*py
 sentence = input("Input:")
 asc = list(sentence)

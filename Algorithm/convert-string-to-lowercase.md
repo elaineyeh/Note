@@ -1,4 +1,7 @@
-# 將英文字母由大寫轉為小寫
+# Convert-string-to-lowercase
+
+將英文字母由大寫轉為小寫
+
 ```*py
 sentence = input("Input:")
 asc = list(sentence)
