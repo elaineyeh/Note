@@ -2,7 +2,7 @@
 
 將英文字母由大寫轉為小寫
 
-```*py
+``` py
 sentence = input("Input:")
 asc = list(sentence)
 

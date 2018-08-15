@@ -2,7 +2,7 @@
 
 將英文字母由大寫轉為小寫並統計字母出現次數
 
-```*py
+``` py
 sentence = input("Input:")
 asc = list(sentence)
 character = {}
