@@ -26,7 +26,7 @@ print(table)
 ```
 
 ```py
-table = list() #將 table 跟 solve 結合，節省程式碼
+table = list() #將 table 跟 solve 結合，節省程式碼
 
 for i in range(0, 6):
     table.append(0)
