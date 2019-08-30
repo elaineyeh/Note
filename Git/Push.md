@@ -31,6 +31,7 @@ git push
 ---
 # The basic instructions of Git
 ### 比較檔案版本前後差異  
+在未 git add 之前跟上一個版本的比較
 ```
 git diff  
 ```
@@ -42,7 +43,7 @@ git log
 ```
 git status  
 ```
-### 查看之前的版本
+### 跳回之前的版本
 ```
 git checkout
 ```
