@@ -6,7 +6,7 @@
 Clone 下來
 ## Step 3.
 推上 Github
-```=shell
+```shell=
 $ git add filename
 $ git commit -m "comment"
 $ git push

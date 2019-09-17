@@ -5,6 +5,6 @@
 ![Clone or Download](https://imgur.com/RaqU4Oj.png)
 ## Setp2.
 在**要放專案的位置下**，網址為上一步驟複製的網址
-```=shell
+```shell=
 git clone url
 ```
