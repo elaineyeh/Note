@@ -86,4 +86,27 @@ $ git add join.html
 $ git commit --amend --no-edit
 ```
 --no-edit mean no edit commit message  
-**Do not use in the file which has been pushed.**
+**Do not use in the file which has been pushed.**  
+
+---
+# Some instructions about directory
+### Add empty directory
+```shell=
+$ mkdir images
+```
+But Git can not commit a empty folder, so you can add a ".keep" or ".gitkeep" file.
+```shell=
+$ touch images/.keep
+```
+### Ignore specific file
+```shell=
+$ touch .gitignore
+```
+Edit `.gitignore`. Type the filename which you want Git to ignore.  
+It only can ignore the file add after the gitignore setting.  
+> $ git rm --cached
+>> ignore the file whiche has been tracked.
+### Force to add file without gitignore
+```shell=
+$ git add -f filename
+```
