@@ -79,4 +79,11 @@ $ git rm welcome.html --cached
 ```shell=
 $ git commit --amend -m "Hello"
 ```
-**last time commit only!**
+**last time commit only!**  
+#### Insert another file in last time commit
+```shell=
+$ git add join.html  
+$ git commit --amend --no-edit
+```
+--no-edit mean no edit commit message  
+**Do not use in the file which has been pushed.**
