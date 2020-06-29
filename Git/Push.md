@@ -87,6 +87,17 @@ $ git commit --amend --no-edit
 ```
 --no-edit mean no edit commit message  
 **Do not use in the file which has been pushed.**  
+### Check specific file log
+> $ git log filename
+>> Check the file log
+
+> $ git log -p filename
+>> Check the file different in each log  
+### Check who write the file
+```shell=
+$ git blame filename  
+$ git blame -L 5,10 filename  #Display only line 5 to 10.
+```
 
 ---
 # Some instructions about directory
