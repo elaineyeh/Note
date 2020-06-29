@@ -47,3 +47,36 @@ $ git status
 ```shell=
 $ git checkout
 ```
+### Find log with specific condition
+> $ git log --online --author="Andy"  
+>> find log which author is "Andy".  
+
+> $ git log --online --grep="fixed"  
+>> find commit which has write "fixed".
+
+> $ git log -s "git"
+>> find commit which has write "git".
+
+>$ git log --online --since="9am" --until="12pm" --after="2020-07"
+>> find commit which upload after 2020 July between nine to tweleve.
+### Remove file
+> $ rm welecome.html  
+>> Need to add file again 
+
+> $ git rm welcome.html  
+>> Already add  
+### Untracked file
+```shell=
+$ git rm welcome.html --cached
+```
+### Rename file
+> $ mv hello.html welcome.html
+>> Need to add file again
+
+> $ git mv hello.html welcome.html
+>> Already add
+### Modify the last time commit
+```shell=
+$ git commit --amend -m "Hello"
+```
+**last time commit only!**
