@@ -49,7 +49,7 @@ $ git checkout
 ```
 ### Find log with specific condition
 > $ git log --online --author="Andy"  
->> find log which author is "Andy".  
+>> find log which author is "Andy".
 
 > $ git log --online --grep="fixed"  
 >> find commit which has write "fixed".
@@ -61,20 +61,20 @@ $ git checkout
 >> find commit which upload after 2020 July between nine to tweleve.
 ### Remove file
 > $ rm welecome.html  
->> Need to add file again 
+>> Need to add file again. 
 
 > $ git rm welcome.html  
->> Already add  
+>> Already add.  
 ### Untracked file
 ```shell=
 $ git rm welcome.html --cached
 ```
 ### Rename file
 > $ mv hello.html welcome.html
->> Need to add file again
+>> Need to add file again.
 
 > $ git mv hello.html welcome.html
->> Already add
+>> Already add.
 ### Modify the last time commit
 ```shell=
 $ git commit --amend -m "Hello"
@@ -85,14 +85,14 @@ $ git commit --amend -m "Hello"
 $ git add join.html  
 $ git commit --amend --no-edit
 ```
---no-edit mean no edit commit message  
+--no-edit mean no edit commit message.  
 **Do not use in the file which has been pushed.**  
 ### Check specific file log
 > $ git log filename
->> Check the file log
+>> Check the file log.
 
 > $ git log -p filename
->> Check the file different in each log  
+>> Check the file different in each log.  
 ### Check who write the file
 ```shell=
 $ git blame filename  
@@ -121,3 +121,23 @@ It only can ignore the file add after the gitignore setting.
 ```shell=
 $ git add -f filename
 ```
+### Recovery the file
+> $ git checkout filename
+>> Recovery specific file.
+
+> $ git checkout HEAD-2 .
+>> Recovery all file for last two version.
+
+### Remove commit
+> $ git reset log^
+>> Fall back to the log last time commit.
+
+> $ git reset log
+>> Fall back to the log commit.  
+
+`reset` mean like **go to** or **become**. You can pick it up anytime.  
+
+|         | Mixed Mode | Soft Mode | Hard Mode |
+|:-------:|:----------:|:---------:|:----------:|
+|Work List| Not Change | Not Change | Throw away |
+|Storage Cache| Throw away | Not Change | Throw away |
