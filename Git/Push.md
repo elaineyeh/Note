@@ -1,10 +1,10 @@
 # How to push to Github
-## Step 1. 
+## Step 1.
 在要進行版本控制的資料夾下
 ```shell=
 $ git init
 ```
-## Step 2. 
+## Step 2.
 `firename` 為有更動、要做紀錄的檔案名稱
 ```shell=
 $ git add firename
@@ -30,28 +30,32 @@ $ git push
 
 ---
 # The basic instructions of Git
-### 比較檔案版本前後差異  
-在未 git add 之前跟上一個版本的比較
+### 比較檔案版本前後差異
+Commit file compare with unadd file
 ```shell=
-$ git diff  
+$ git diff
 ```
-### 看目前 commit 過的版本  
-```shell=
-$ git log  
+Add file compare with commit file
+```shell
+$ git diff --staged
 ```
-### 看目前有沒有檔案更動  
+### 看目前 commit 過的版本
 ```shell=
-$ git status  
+$ git log
+```
+### 看目前有沒有檔案更動
+```shell=
+$ git status
 ```
 ### 跳回之前的版本
 ```shell=
 $ git checkout
 ```
 ### Find log with specific condition
-> $ git log --online --author="Andy"  
+> $ git log --online --author="Andy"
 >> find log which author is "Andy".
 
-> $ git log --online --grep="fixed"  
+> $ git log --online --grep="fixed"
 >> find commit which has write "fixed".
 
 > $ git log -s "git"
@@ -60,11 +64,11 @@ $ git checkout
 >$ git log --online --since="9am" --until="12pm" --after="2020-07"
 >> find commit which upload after 2020 July between nine to tweleve.
 ### Remove file
-> $ rm welecome.html  
->> Need to add file again. 
+> $ rm welecome.html
+>> Need to add file again.
 
-> $ git rm welcome.html  
->> Already add.  
+> $ git rm welcome.html
+>> Already add.
 ### Untracked file
 ```shell=
 $ git rm welcome.html --cached
@@ -79,23 +83,23 @@ $ git rm welcome.html --cached
 ```shell=
 $ git commit --amend -m "Hello"
 ```
-**last time commit only!**  
+**last time commit only!**
 #### Insert another file in last time commit
 ```shell=
-$ git add join.html  
+$ git add join.html
 $ git commit --amend --no-edit
 ```
---no-edit mean no edit commit message.  
-**Do not use in the file which has been pushed.**  
+--no-edit mean no edit commit message.
+**Do not use in the file which has been pushed.**
 ### Check specific file log
 > $ git log filename
 >> Check the file log.
 
 > $ git log -p filename
->> Check the file different in each log.  
+>> Check the file different in each log.
 ### Check who write the file
 ```shell=
-$ git blame filename  
+$ git blame filename
 $ git blame -L 5,10 filename  #Display only line 5 to 10.
 ```
 
@@ -113,8 +117,8 @@ $ touch images/.keep
 ```shell=
 $ touch .gitignore
 ```
-Edit `.gitignore`. Type the filename which you want Git to ignore.  
-It only can ignore the file add after the gitignore setting.  
+Edit `.gitignore`. Type the filename which you want Git to ignore.
+It only can ignore the file add after the gitignore setting.
 > $ git rm --cached
 >> ignore the file whiche has been tracked.
 ### Force to add file without gitignore
@@ -133,11 +137,22 @@ $ git add -f filename
 >> Fall back to the log last time commit.
 
 > $ git reset log
->> Fall back to the log commit.  
+>> Fall back to the log commit.
 
-`reset` mean like **go to** or **become**. You can pick it up anytime.  
+`reset` mean like **go to** or **become**. You can pick it up anytime.
 
 |         | Mixed Mode | Soft Mode | Hard Mode |
 |:-------:|:----------:|:---------:|:----------:|
 |Work List| Not Change | Not Change | Throw away |
 |Storage Cache| Throw away | Not Change | Throw away |
+
+### Add and unadd specify line in file
+It will ask you add or unadd one by one in each paragraph
+Add
+```shell
+$ git add -p .
+```
+Unadd
+```shell
+$ git reset-p .
+```
