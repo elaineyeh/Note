@@ -4,22 +4,26 @@ Both in 80 port
 project one -> one.prj.com
 project two -> two.prj.com
 ```
+The project needs to put in a place where Nginx has permission to read.
 ## Step 1. Create a project a and b
 ```
-|__a
-|  |__index.html
-|
-|__b
-   |__index.html
+|_nginx
+    |__a
+    |  |__index.html
+    |
+    |__b
+       |__index.html
 ```
 Display anything you want in html
 
 ## Step 2. Create project a and b's default.conf in folder conf.d
-The project needs to put in a place where is public. And the group needs to be changed to admin.
+The group needs to be changed to admin.
 ```
-|__conf.d
-      |__a.conf
-      |__b.conf
+|__etc
+    |__nginx
+          |__conf.d
+                |__a.conf
+                |__b.conf
 ```
 ### a.conf
 ```
