@@ -1,4 +1,4 @@
-# Create multiple websites with different domain in 80 port
+# Create multiple websites with different domain in 80 port in local
 ```
 Both in 80 port
 project one -> one.prj.com
