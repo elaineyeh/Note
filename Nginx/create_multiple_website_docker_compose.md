@@ -8,7 +8,7 @@
      |__b
         |__index.html
 ```
-Display anything you want in html
+輸入你想輸入的內容
 
 ## Step 2. Create a and b's docker-compose.yml
 ```
@@ -135,18 +135,18 @@ server {
 ```
 
 ## Step 5. Docker compose up
-Now we can docker compose up and connect each other.
+現在我們可以 docker compose 並將他們連接起來
 ```shell
 $ docker-compose -f ~/Documents/Git/nginx/a/docker-compose-a.yml -f ~/Documents/Git/nginx/b/docker-compose-b.yml -f ~/Documents/Git/nginx/middle/docker-compose.yml up -d
 ```
-If it has something wrong, don't use `-d`, let it show the error.
+如果有錯誤可以不下 `-d`，來顯示錯誤
 
 ---
-Show the logs about the docker.
+顯示該 docker 的 log
 ```
 $ docker log -f aws_middle
 ```
-Check the volumes work or not.
+檢查 vomues 是否正常運作
 ```
 $ docker exec -it aws_middle /bin/bash/
 ```
