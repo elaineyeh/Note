@@ -56,8 +56,9 @@ jobs:
 ```
 
 ## Step 4. Write deploy.sh
-**先順過流程再寫才不用一直改來改去**
 deploy.sh 執行 git pull, docker compose up 等動作，讓網頁跑起來
+### 先順過流程再寫才不用一直改來改去
+### 因為我們檔案是下 git pull ，所以第一次要手動連線到伺服器 git clone
 ```
 echo $CIRCLE_PROJECT_REPONAME
 cd $CIRCLE_PROJECT_REPONAME
@@ -92,7 +93,7 @@ ssh=secure shell
 ## Step 7. Set the environment variable
 為了跑 config.yml 可時候可以代數環境變數
 ## Step 8. Set the Github ssh key
-設定 Github ssh key 讓 circle 可以不用輸入密碼就將專案拉下來
-**是將公鑰上傳**
+#### 設定 Github ssh key 讓 circle 可以不用輸入密碼就將專案拉下來
+#### 是將公鑰上傳
 [Reference](https://ithelp.ithome.com.tw/articles/10205988)
 ## Step 9. Try and error
