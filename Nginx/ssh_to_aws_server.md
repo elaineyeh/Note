@@ -48,10 +48,8 @@ jobs:
 
       - run: echo "hello world" # run the `echo` command
       - run: echo $CIRCLE_PROJECT_REPONAME # get the github project name
-      - run: echo $CIRCLE_PROJECT_REPONAME >> sshenv # set the project name to the ssh environment variable
-      - run: scp -o StrictHostKeyChecking=no sshenv $USER@$HOST:~/.ssh/environment # bring the ssh environment variable and set the continue connect is yes
-      # - run: envsubst '${CIRCLE_PROJECT_REPONAME}' < deploy.sh > real_deploy.sh # copy the deploy.sh to real_deploy.sh and bring the environment variable
-      - run: ssh -o StrictHostKeyChecking=no $USER@$HOST < deploy.sh # ssh to AWS server
+      - run: envsubst '${CIRCLE_PROJECT_REPONAME}' < deploy.sh > real_deploy.sh # copy the deploy.sh to real_deploy.sh and bring the environment variable
+      - run: ssh -o StrictHostKeyChecking=no $USER@$HOST < real_deploy.sh # ssh to AWS server
 
 ```
 
