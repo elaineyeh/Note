@@ -195,6 +195,10 @@ server {
 為了跑 config.yml 可時候可以代數環境變數
 ## Step 8. Set the Github ssh key
 #### 設定 Github ssh key 讓 circle 可以不用輸入密碼就將專案拉下來
-#### 是將公鑰上傳
+#### 將公鑰上傳
 [Reference](https://ithelp.ithome.com.tw/articles/10205988)
 ## Step 9. Try and error
+
+### Note
+copy file to ssh
+scp -i "key.pem" FILE_YOU_WANT_TO_BRING SSH_IP:/home/ubuntu/FILE_PATH_YOU_WANT_TO_PUT
