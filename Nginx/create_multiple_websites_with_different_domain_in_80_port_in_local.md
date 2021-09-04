@@ -14,7 +14,9 @@ The project needs to put in a place where Nginx has permission to read.
     |__b
        |__index.html
 ```
-Display anything you want in html
+Display anything you want in html  
+**Notice the a and b project's file and folder user and group need to be changed. To ensure files and folders can be controlled.**  
+**At the same time, you need to ensure the permission of directories**  
 
 ## Step 2. Create project a and b's default.conf in folder conf.d
 The group needs to be changed to admin.
@@ -63,3 +65,13 @@ server {
 ```
 include /usr/local/etc/nginx/conf.d/*;
 ```
+
+## Step4. Modify the hosts file to set the domain
+```
+$ vim /etc/hosts
+```
+
+---
+## Reference URL:
+[Nginx Base Usage](https://medium.com/tool-s/%E5%AE%89%E8%A3%9D-nginx-on-mac-eb739295e153)  
+[Multiple domains on a Nginx server](https://linuxhint.com/install-multiple-domains-nginx-server/)  
