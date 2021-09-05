@@ -13,7 +13,7 @@ The project needs to put in a place where Docker has permission to read.
           |  |__index.html
           |
           |__b
-            |__index.html
+             |__index.html
 ```
 Display anything you want in html
 
@@ -98,6 +98,11 @@ $ docker run --name middle --link prj_a:prj_a --link prj_b:prj_b -v $PWD/default
 --link prj_a:prj_a -> link docker docker you have run:the name you want to call in this docker
 -p -> set the ip and port
 0.0.0.0:80:80 -> ip is 0.0.0.0, which means all ip can access. And local port is 80 port, docker port is 80 port.
+```
+
+## Step4. Modify the hosts file to set the domain
+```
+$ vim /etc/hosts
 ```
 
 ### If you want to check whether it works, check middle's logs.
