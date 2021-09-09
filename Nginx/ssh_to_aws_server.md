@@ -9,7 +9,7 @@
 ```
 version: '3'
 services:
-  prj_a:
+  ${CIRCLE_PROJECT_REPONAME}:
     image: nginx
     volumes:
       - ${PWD}:/usr/share/nginx/html
@@ -198,6 +198,7 @@ server {
 #### 將公鑰上傳
 [Reference](https://ithelp.ithome.com.tw/articles/10205988)
 ## Step 9. Try and error
+如果在 ciricleci 卡住，可以在 Github 加入 ssh key 登入 circleci，在 "Enable SSh" 點開可以看到 "ssh -p 64535 34.204.17.47"
 
 ### Note
 copy file to ssh
