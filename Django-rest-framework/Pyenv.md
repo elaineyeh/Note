@@ -56,10 +56,21 @@ CFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix bzip2)/include -I$(
 ```shell
 $ pyenv versions
 ```
-Set the folder of Python version
+### Set the folder of Python version
 ```shell
 $ pyenv local X.X.X
 ```
-Check the version of Python
+If it doesn't work, just try it:
+```shell
+eval "$(pyenv init -)"
+```
+### Check the version of Python
 ```shell
 $ python -V
+```
+
+---
+## Reference
+[Can't install Python version](https://lifesaver.codes/answer/unable-to-install-python-3-8-0-on-macox-11-1740)
+
+[Can't switch Python version with pyenv](https://stackoverflow.com/questions/33321312/cannot-switch-python-with-pyenv)
