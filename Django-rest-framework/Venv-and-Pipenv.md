@@ -7,7 +7,7 @@ $ pip install virtualenv
 ```
 ### Use
 ```shell
-$ cd your-project-folder
+$ cd YOUR-PORJECT-FOLDER
 ```
 Create virtual environment
 ```shell
@@ -28,7 +28,7 @@ The same as `venv & requirements.txt`, but pipenv can track the package automati
 ```shell
 $ pip install pipenv
 ```
-Or you can use with `brew
+Or you can use with `brew`
 ```shell
 $ brew install pipenv
 ```
@@ -40,11 +40,11 @@ $ which pipenv
 ```
 Check pipenv version
 ```shell
-$ pipenv -V
+$ pipenv --version
 ```
 Create pipenv or Get into pipenv
 ```shell
-$ cd your-project-folder
+$ cd YOUR-PORJECT-FOLDER
 ```
 ```shell
 $ pipenv shell
