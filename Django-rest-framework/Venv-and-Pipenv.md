@@ -34,15 +34,15 @@ $ brew install pipenv
 ```
 
 ### Use
-Check installation
+#### Check installation
 ```shell
 $ which pipenv
 ```
-Check pipenv version
+#### Check pipenv version
 ```shell
 $ pipenv --version
 ```
-Create pipenv or Get into pipenv
+#### Create pipenv or Get into pipenv
 ```shell
 $ cd YOUR-PORJECT-FOLDER
 ```
