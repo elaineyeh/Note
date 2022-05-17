@@ -49,7 +49,15 @@ $ cd YOUR-PORJECT-FOLDER
 ```shell
 $ pipenv shell
 ```
-Leave pipenv
+If pipenv doesn't catch pyenv version, try this:
+```shell
+$ pipenv --python 3.8.3 shell
+```
+If pipenv shell already have the same folder name, try this:
+```shell
+$ pipenv --rm
+```
+#### Leave pipenv
 ```shell
 $ exit
 ```
